@@ -1,0 +1,77 @@
+<div id="podcast_show">
+	<div id="show_banner">
+		<div class="wrapper_skinny">
+			<h1><%= @podcast.title %></h1>
+			<p class="description"><%= @podcast.description %></p>
+			<% unless @podcast.itunes.blank? %>
+				<a href="<% @podcast.itunes %>" class="subscribe_link">iTunes</a>
+			<% end %>
+			<% unless @podcast.stitcher.blank? %>	
+				<a href="<% @podcast.stitcher %>" class="subscribe_link">Stitcher</a>
+			<% end %>
+			<% unless @podcast.podbay.blank? %>	
+				<a href="<% @podcast.podbay %>" class="subscribe_link">PodBay</a>
+			<% end %>
+		</div>
+	</div>
+	<div class="breadcrumb">
+		<%= link_to podcasts_path do %>
+			All podcasts
+			<span>/</span>
+			The Tony Robbins Podcast  
+		<% end %>
+	</div>
+	<div class="episodes">
+		<div class="wrapper_skinny">
+			<ul class="cf">
+				<li class="cf">
+					<div class="episode_thumbnail">
+						<a href="episode.html">
+							<img src="images/people/chris.jpg" alt="Chris">
+						</a>
+					</div>
+					<div class="episode_overview">
+						<h2><a href="episode.html">Success is easy. Steps to follow</a></h2>
+						<p class="description">Chris is telling his story about how he climbed so high the ladder, encounting different fails, leaks and drawbacks and how you can apply his knowledge to your daily problems and leave the life you want.</p>
+					</div>
+				</li>
+
+				<li class="cf">
+					<div class="episode_thumbnail">
+						<a href="#">
+							<img src="images/people/chris.jpg" alt="Chris">
+						</a>
+					</div>
+					<div class="episode_overview">
+						<h2><a href="#">Success is easy. Steps to follow</a></h2>
+						<p class="description">Chris is telling his story about how he climbed so high the ladder, encounting different fails, leaks and drawbacks and how you can apply his knowledge to your daily problems and leave the life you want.</p>
+					</div>
+				</li>
+
+				<li class="cf">
+					<div class="episode_thumbnail">
+						<a href="#">
+							<img src="images/people/chris.jpg" alt="Chris">
+						</a>
+					</div>
+					<div class="episode_overview">
+						<h2><a href="#">Success is easy. Steps to follow</a></h2>
+						<p class="description">Chris is telling his story about how he climbed so high the ladder, encounting different fails, leaks and drawbacks and how you can apply his knowledge to your daily problems and leave the life you want.</p>
+					</div>
+				</li>
+
+				<li class="cf">
+					<div class="episode_thumbnail">
+						<a href="#">
+							<img src="images/people/chris.jpg" alt="Chris">
+						</a>
+					</div>
+					<div class="episode_overview">
+						<h2><a href="#">Success is easy. Steps to follow</a></h2>
+						<p class="description">Chris is telling his story about how he climbed so high the ladder, encounting different fails, leaks and drawbacks and how you can apply his knowledge to your daily problems and leave the life you want.</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
