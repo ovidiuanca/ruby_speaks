@@ -1,4 +1,4 @@
-class DeviseCreatePodcasts < ActiveRecord::Migration
+ class DeviseCreatePodcasts < ActiveRecord::Migration
   def change
     create_table :podcasts do |t|
       ## Database authenticatable
