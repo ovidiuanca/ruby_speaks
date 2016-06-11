@@ -8,7 +8,7 @@
     <div class="wrapper_skinny">
       <ul>
         <li><%= link_to "Episodes", root_path %></li>
-        <li class="current">New episode</li>
+        <li><%= link_to "New episode", new_podcast_episode_path(@podcast) %></li>
         <li><%= link_to "Account Settings", edit_podcast_registration_path%></li>
         <li><%= link_to "View Podcast", podcast_path(@podcast) %></li>
      </ul>
