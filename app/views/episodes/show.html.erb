@@ -18,17 +18,28 @@
 		<%= link_to podcasts_path do %>
 			All podcasts
 			<span>/</span>
+			<%= link_to @podcast.title, podcast_path(@podcast) %>
+			<span>/</span>
+			<%= @episode.title %>
 		<% end %>
-		<%= @podcast.title %>
 	</div>
+
+	<div class="episode_content">
+		<div class="wrapper_skinny">
+			<img src="images/people/chris.jpg" alt="Chris" class="current_episode_thumbnail">
+			<h2><%= @episode.title %></h2>
+			<p class="description"><%= @episode.description %></p> 
+		</div>
+	</div>
+
 	<div class="episodes">
 		<div class="wrapper_skinny">
 			<ul class="cf">
 				<% @episodes.each do |episode| %>
 					<li class="cf">
 						<div class="episode_thumbnail">
-							<a href="#">
-								<img src="images/people/chris.jpg" alt="Chris">
+							<a href="episode.html">
+								<img src="images/people/jackie.jpg" alt="Jackie">
 							</a>
 						</div>
 						<div class="episode_overview">
