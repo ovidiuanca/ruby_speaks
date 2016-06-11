@@ -1,18 +1,37 @@
-<h1>New episode</h1>
+<div id="podcast_show">
+  <div id="show_banner">
+    <div class="wrapper_skinny">
+      <h1>Tony Robbins Podcast Dashboard</h1>
+    </div>
+  </div>
+  <div class="links">
+    <div class="wrapper_skinny">
+      <ul>
+        <li><%= link_to "Episodes", root_path %></li>
+        <li class="current">New episode</li>
+        <li><%= link_to "Account Settings", edit_podcast_registration_path%></li>
+        <li><%= link_to "View Podcast", podcast_path(@podcast) %></li>
+     </ul>
+   </div>
+  </div>
 
-<%= form_for ([@podcast, @episode]) do |f| %>
-	<%= f.label :title %><br>
-	<%= f.text_field :title %><br>
+  <div class="wrapper_skinny">
+	<%= form_for ([@podcast, @episode]) do |f| %>
+		<div class="field">
+			<%= f.label :title %><br>
+			<%= f.text_field :title %><br>
+		</div>
+		<br>
+		<br>
+		<div>
+			<%= f.label :description %>
+			<%= f.text_area :description %>
+		</div>
+		<br>
+		<br>
 
-	<br>
-	<br>
+		<%= f.submit "New episode", class: "button button_highlight button_block"%>
 
-	<%= f.label :description %>
-	<%= f.text_area :description %>
-
-	<br>
-	<br>
-
-	<%= f.submit %>
-
-<% end %>
+	<% end %>
+  </div>
+</div>
