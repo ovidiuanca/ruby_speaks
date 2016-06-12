@@ -14,24 +14,26 @@
 	<p class="alert"><%= alert %></p>
 <% end %>
 
-<header id="main_header" class="cf">
-	<div class="wrapper_wide">
-		<%= link_to "Ruby.speaks", root_path, id: "logo"  %>
-		<nav>
-			<ul>
-				<% unless podcast_signed_in? %>
-					<li><%= link_to "Explore", podcasts_path %></li>
-					<li><%= link_to "Sign in", new_podcast_session_path  %></li>
-					<li><%= link_to "Create a podcast", new_podcast_registration_path %></li>
-				<% else %>
-					<li><%= link_to "Dashboard", root_path %></li>
-					<li><%= link_to "Explore", podcasts_path %></li>
-					<li><%= link_to "Sign out", destroy_podcast_session_path, method: :delete %></li>
-				<% end %>
-			</ul>
-		</nav>
-	</div>
-</header>
+<% if podcast_signed_in? %>
+	<header id="main_header" class="cf">
+		<div class="wrapper_wide">
+			<%= link_to "Ruby.speaks", root_path, id: "logo"  %>
+			<nav>
+				<ul>
+					<% unless podcast_signed_in? %>
+						<li><%= link_to "Explore", podcasts_path %></li>
+						<li><%= link_to "Sign in", new_podcast_session_path  %></li>
+						<li><%= link_to "Create a podcast", new_podcast_registration_path %></li>
+					<% else %>
+						<li><%= link_to "Dashboard", root_path %></li>
+						<li><%= link_to "Explore", podcasts_path %></li>
+						<li><%= link_to "Sign out", destroy_podcast_session_path, method: :delete %></li>
+					<% end %>
+				</ul>
+			</nav>
+		</div>
+	</header>
+<% end %>
 
 <%= yield %>
 
